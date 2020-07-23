@@ -1,0 +1,17 @@
+<h1>About <%=@artist.name %></h1>
+
+<%= @artist.name %> is <%= @artist.age %> years old. 
+
+Their title is <%= @artist.title %>.<br><br>
+        
+<% if @artist.instruments.length > 0%>
+    Instruments they play include:<br>
+    <ul>
+    <% @artist.instruments.each do |instrument|  %>
+        <li>
+            <%= instrument.name %>
+        </li>
+    <% end%>
+    <ul>
+<% end%> 
+
